@@ -1,5 +1,5 @@
 const subHeading = document.querySelector(".typeWriter");
-const texts = ["Terminal.", "CLI.", "Shell.","Command Line."];
+const texts = ["Terminal", "CLI", "Shell","Command Line"];
 let currentIndex = 0; 
 let letterIndex = 0;  
 let isDeleting = false; 
