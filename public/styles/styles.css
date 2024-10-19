@@ -23,6 +23,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 25%;
     margin-bottom: 50px;
 }
 .hero-heading {
@@ -42,6 +43,9 @@ body {
     font-weight: 400;
     margin: 0;
     padding: 0;
+}
+.typeWriter {
+    font-weight: 600;
 }
 form {
     margin-top: 20px;
@@ -71,7 +75,6 @@ input[type="text"]::placeholder {
     justify-content: center;
     align-items: center;
     background-color: #ffde59;
-    font-family: "Poppins";
     height: 45px;
     width: 47px;
     border: none;

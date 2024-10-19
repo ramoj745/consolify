@@ -14,11 +14,11 @@
         <div class="hero">
             <div class="hero-heading">
                 <h1 class="heading"><span class="heading-consol">Consol</span>ify</h1>
-                <h3 class="sub-heading">Your GitHub stats, served in a terminal.</h3>
+                <h3 class="sub-heading">Your GitHub stats, served in a <span class="typeWriter"></span></h3>
             </div>
     
             <div class="search-user">
-                <form action="post">
+                <form action="/generate" method="POST">
                     <input type="text" name="username" placeholder="Search by GitHub username" class="input" required>
                     <button class="search">
                         <img src="/images/search.svg" height="28px">
@@ -31,5 +31,6 @@
     <footer>
         Consolify ©  Made with <span class="github-api">GitHub API</span>
     </footer>
+    <script src="/recursiveType.js"></script>
 </body>
 </html>
