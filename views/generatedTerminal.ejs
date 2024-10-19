@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consolify</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content-container">
+        <div class="terminal">
+            <div class="title-bar">
+                <div class="buttons">
+                    <div class="red"></div>
+                    <div class="yellow"></div>
+                    <div class="green"></div>
+                </div>
+                <div class="directory">
+                    <img src="/images/folder.png" height="20px" alt="">
+                    <p>Consolify</p>
+                </div>
+            </div>
+            <div class="screen">
+                <p>Developed with ❤️ by ram</p>
+                <p>C:\Users\Consolify>getUser</p>
+                <p>>Loading User Data...</p>
+                <%if (!data) {%>
+                <p><span class="output">Error:</span> User may not exist or there's problem with the server.</p><br>
+                <p><span class="output">Details:</span> <%=errorMessage%> returned with status code <%=errorStatus%>
+                <p>><span class="cursor">_</p>
+                <%} else {%>
+                <br>
+                <p><span class="output">userName:</span> <%=data.name%></p>
+                <p><span class="output">githubLink:</span> <a href="<%=data.html_url%>" class="profileLink"><%=data.html_url%><a></p>
+                <p><span class="output">followerCount:</span> <%=data.followers%></p>
+                <p><span class="output">followingCount:</span> <%=data.following%></p>
+                <p><span class="output">publicRepositoryCount:</span> <%=data.public_repos%></p>
+                <p><span class="output">bio:</span> <%=data.bio%></p>
+                <p>><span class="cursor">_</p>
+                <%}%>
+            </div>
+        </div>
+        <form id="back" action="/"></form>
+        <button type="submit" form="back" class="back">
+            <img src="/images/back.png" height="28px">
+        </button>
+
+        
+    </div>
+    <footer>
+        Consolify ©  Made with <span class="github-api">GitHub API</span>
+    </footer>
+</body>
+</html>
