@@ -1,9 +1,11 @@
 import express from "express"
 import bodyParser from "body-parser"
 import axios from "axios"
+import dotenv from "dotenv"
 
 const app = express()
 const port = 3000
+dotenv.config();
 
 app.set('view engine', 'ejs')
 app.use(express.static("public"))
@@ -18,7 +20,11 @@ app.post("/generate", async (req, res) => {
     const url = `https://api.github.com/users/${username}`;
 
     try {
-        const response = await axios.get(url)
+        const response = await axios.get(url, {
+            headers: {
+                "Authorization": `token ${process.env.GITHUB_TOKEN}`
+            }
+        })
         const data = response.data
         res.render("generatedTerminal", {data : data})
     } catch (error) {
